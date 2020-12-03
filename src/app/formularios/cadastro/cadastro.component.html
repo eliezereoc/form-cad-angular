@@ -1,0 +1,90 @@
+<div class="container-fluid mt-3">
+    <div>
+        <p>Formulário Reativo Angular</p>
+    </div>
+
+    <div class="central">
+        <div class="row">
+            <div class="col-md-11 mx-auto espaco-top">
+                <!-- <div class="card titulo-form text-center"> -->
+                <!-- <span>Cadastro</span> -->
+                <!-- </div> -->
+
+                <div class="titulo-form text-center">
+                    <h1>Cadastro</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mx-auto espaco-top">
+
+                <form [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
+
+                    <div class="form-row">
+
+                        <div class="form-group col-sm-6">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" name="name" id="nome" formControlName="nome">
+
+                        </div>
+
+                        <div class="form-group col-sm-2">
+                            <label for="tipo">Tipo</label>
+                            <select class="form-control" name="tipo" id="tipo" formControlName="tipo">
+                                <option value="1">Pessoa física</option>
+                                <option value="2">Pessoa jurídica</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-sm-2">
+                            <label for="dataNascimento">Data de nascimento</label>
+                            <input type="date" class="form-control" name="dataNascimento" id="dataNascimento"
+                                formControlName="dataNascimento">
+                        </div>
+
+
+
+
+                        <div class="form-group col-sm-2">
+                            <label>Gênero</label>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genero" id="masculino" [value]="1"
+                                    formControlName="genero">
+                                <label class="form-check-label" for="masculino">Masculino</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="genero" id="feminino" [value]="2"
+                                    formControlName="genero">
+                                <label class="form-check-label" for="feminino">Feminino</label>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group col-sm-12">
+                            <label for="observacao">Observação</label>
+                            <textarea class="form-control" rows="3" name="observacao" id="observacao"
+                                formControlName="observacao"></textarea>
+                        </div>
+
+                        <div class="form-group col-sm-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="inativo" id="inativo"
+                                    formControlName="inativo">
+                                <label class="form-check-label" for="inativo">Inativo</label>
+                            </div>
+                        </div>
+
+                        <input type="submit" class="btn btn-primary mt-4" value="Salvar">
+                        <a href="#" class="btn btn-secondary mt-4 ml-2">Cancelar</a>
+
+
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
