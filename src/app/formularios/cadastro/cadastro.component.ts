@@ -32,6 +32,12 @@ export class CadastroComponent implements OnInit {
   onSubmit() {
     // aqui você pode implementar a logica para fazer seu formulário salvar
     console.log(this.formCadastro.value);
+
+    // chamando a função createForm para limpar os campos na tela
+    //this.createForm(new FormCad());
+    
+    // Usar o método reset para limpar os controles na tela
+    this.formCadastro.reset(new  FormCad());
   }
 
 }
